@@ -2,8 +2,8 @@ import useProducts from 'hooks/useProducts'
 
 import ProductDetails from 'components/ProductDetails'
 
-export default function Home() {
-    const { products } = useProducts('createdAt')
+export default function Populars() {
+    const { products } = useProducts('votes')
 
     return (
         <div className='products-list'>
