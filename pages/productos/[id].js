@@ -86,6 +86,8 @@ export default function Product() {
             return push('/iniciar-sesion')
         }
 
+        if (!comment.message) return
+
         comment.creatorId = user.uid
         comment.creatorName = user.displayName
 
