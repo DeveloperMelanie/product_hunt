@@ -94,8 +94,9 @@ export default function Product() {
         const newComments = [...comments, comment]
 
         setProduct({ ...product, comments: newComments })
-        await firebase.createComment(id, newComments)
         setComment({})
+        e.target.reset()
+        await firebase.createComment(id, newComments)
     }
 
     const isCreator = id => {
