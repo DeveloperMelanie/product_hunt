@@ -10,17 +10,15 @@ export default css`
         max-width: 1200px;
         width: 95%;
         margin: 0 auto;
-    }
-
-    .header-container {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 
     @media (min-width: 768px) {
         .header-container {
-            flex-wrap: nowrap;
+            flex-direction: row;
             justify-content: space-between;
         }
     }
@@ -42,7 +40,7 @@ export default css`
         row-gap: 2rem;
     }
 
-    @media (min-width: 990px) {
+    @media (min-width: 768px) {
         .header-container > div {
             margin-right: 1rem;
         }

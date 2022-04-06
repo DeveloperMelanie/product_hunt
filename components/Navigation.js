@@ -19,8 +19,10 @@ export default function Navigation() {
             )}
 
             <style jsx>{`
-                nav {
-                    padding-left: 2rem;
+                @media (min-width: 650px) {
+                    nav {
+                        padding-left: 2rem;
+                    }
                 }
 
                 a {
