@@ -7,6 +7,7 @@ export default css`
         justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid #e1e1e1;
+        flex-direction: column;
     }
 
     a {
@@ -23,16 +24,41 @@ export default css`
     }
 
     .description {
-        flex: 0 1 600px;
+        flex: unset;
         display: grid;
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: 1fr;
         column-gap: 2rem;
+        justify-items: center;
+        text-align: center;
+    }
+
+    @media (min-width: 768px) {
+        .description {
+            grid-template-columns: 1fr 3fr;
+        }
     }
 
     .comments {
         margin-top: 2rem;
         display: flex;
         align-items: center;
+        justify-content: center;
+    }
+
+    @media (min-width: 440px) {
+        li {
+            flex-direction: row;
+        }
+
+        .description {
+            flex: 0 1 600px;
+            justify-items: unset;
+            text-align: left;
+        }
+
+        .comments {
+            justify-content: unset;
+        }
     }
 
     .comments div {

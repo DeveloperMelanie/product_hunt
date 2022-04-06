@@ -12,9 +12,15 @@ export default css`
         margin: 0 auto;
     }
 
+    .header-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     @media (min-width: 768px) {
         .header-container {
-            display: flex;
+            flex-wrap: nowrap;
             justify-content: space-between;
         }
     }
@@ -30,7 +36,16 @@ export default css`
 
     .header-container > div {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
+        justify-content: center;
+        row-gap: 2rem;
+    }
+
+    @media (min-width: 990px) {
+        .header-container > div {
+            margin-right: 1rem;
+        }
     }
 
     .header-container a {

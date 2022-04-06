@@ -19,6 +19,7 @@ export default css`
         margin-bottom: 2rem;
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
     }
 
     form > div > label,
@@ -35,6 +36,26 @@ export default css`
 
     textarea {
         height: 400px;
+    }
+
+    input[type='file'] {
+        display: none;
+        padding: 0;
+    }
+
+    button {
+        all: unset;
+        display: block;
+        width: 100%;
+        font-weight: 700;
+        text-transform: uppercase;
+        border: 1px solid #d1d1d1;
+        padding: 0.8rem 2rem;
+        margin: 2rem 0;
+        margin-right: 1rem;
+        text-align: center;
+        white-space: nowrap;
+        cursor: pointer;
     }
 
     input[type='submit'] {
@@ -61,5 +82,21 @@ export default css`
         text-align: center;
         text-transform: uppercase;
         margin: 2rem 0;
+    }
+
+    .file-c {
+        flex: 1;
+    }
+
+    .info {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    @media (min-width: 768px) {
+        .info {
+            width: auto;
+        }
     }
 `

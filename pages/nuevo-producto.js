@@ -94,6 +94,19 @@ export default function NewProduct() {
                             onChange={handleChange}
                             onBlur={handleBlur}
                         />
+                        <div className='file-c'>
+                            <button
+                                type='button'
+                                onClick={() =>
+                                    document.getElementById('image').click()
+                                }
+                            >
+                                Elegir archivo
+                            </button>
+                            {image?.name && (
+                                <p className='info'>{image.name}</p>
+                            )}
+                        </div>
                     </div>
                     {errors.image && <p className='error'>{errors.image}</p>}
                     <div>
